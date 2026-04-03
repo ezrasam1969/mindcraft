@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Register for MINDCRAFT 2026 — Karunya's annual tech fest featuring Hackathon, AI Challenge, CTF, and more. April 18-19, 2026." />
+  <title>MINDCRAFT 2026 | Event Registration</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet"/>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- ── HERO SECTION ───────────────────────── -->
+  <header class="hero">
+    <div class="particles" id="particles"></div>
+    <nav class="navbar">
+      <div class="logo">⚡ MINDCRAFT</div>
+      <ul>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#register">Register</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content">
+      <span class="badge">🏆 Annual Tech Fest 2026</span>
+      <h1>MIND<span class="highlight">CRAFT</span></h1>
+      <p class="tagline">Where Innovation Meets Competition</p>
+      <div class="hero-meta">
+        <span><i class="fas fa-calendar"></i> April 18–19, 2026</span>
+        <span><i class="fas fa-map-marker-alt"></i> Karunya Institute, Coimbatore</span>
+        <span><i class="fas fa-users"></i> 500+ Participants</span>
+      </div>
+      <a href="#register" class="cta-btn">Register Now ↓</a>
+    </div>
+  </header>
+
+  <!-- ── COUNTDOWN TIMER ────────────────────── -->
+  <section class="countdown-section">
+    <p class="countdown-label">Event Starts In</p>
+    <div class="countdown" id="countdown">
+      <div class="unit"><span id="days">00</span><label>Days</label></div>
+      <div class="sep">:</div>
+      <div class="unit"><span id="hours">00</span><label>Hours</label></div>
+      <div class="sep">:</div>
+      <div class="unit"><span id="minutes">00</span><label>Mins</label></div>
+      <div class="sep">:</div>
+      <div class="unit"><span id="seconds">00</span><label>Secs</label></div>
+    </div>
+  </section>
+
+  <!-- ── EVENTS GRID ────────────────────────── -->
+  <section id="events" class="events-section">
+    <h2 class="section-title">Choose Your <span class="highlight">Event</span></h2>
+    <div class="events-grid">
+      <div class="event-card" data-event="Hackathon">
+        <i class="fas fa-code"></i>
+        <h3>Hackathon</h3>
+        <p>24-hr coding sprint. Build real solutions.</p>
+        <span class="tag">Team (2–4)</span>
+      </div>
+      <div class="event-card" data-event="AI Challenge">
+        <i class="fas fa-robot"></i>
+        <h3>AI Challenge</h3>
+        <p>Deploy ML models. Compete on accuracy.</p>
+        <span class="tag">Solo / Duo</span>
+      </div>
+      <div class="event-card" data-event="CTF">
+        <i class="fas fa-shield-alt"></i>
+        <h3>CTF</h3>
+        <p>Capture The Flag security challenge.</p>
+        <span class="tag">Team (2–3)</span>
+      </div>
+      <div class="event-card" data-event="Paper Presentation">
+        <i class="fas fa-file-alt"></i>
+        <h3>Paper Presentation</h3>
+        <p>Present your research to a panel.</p>
+        <span class="tag">Solo / Duo</span>
+      </div>
+      <div class="event-card" data-event="UI/UX Design">
+        <i class="fas fa-paint-brush"></i>
+        <h3>UI/UX Design</h3>
+        <p>Design, prototype, and pitch your UI.</p>
+        <span class="tag">Solo</span>
+      </div>
+      <div class="event-card" data-event="Quiz">
+        <i class="fas fa-brain"></i>
+        <h3>Tech Quiz</h3>
+        <p>Test your knowledge across CS domains.</p>
+        <span class="tag">Team (2)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── REGISTRATION FORM ───────────────────── -->
+  <section id="register" class="form-section">
+    <div class="form-container">
+      <div class="form-header">
+        <h2>📋 Registration Form</h2>
+        <p>Fill in your details to secure your spot</p>
+      </div>
+
+      <form id="regForm" novalidate>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label><i class="fas fa-user"></i> Full Name *</label>
+            <input type="text" id="fullName" placeholder="Peta Ezra Sastry" required />
+            <span class="error-msg" id="nameErr"></span>
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-envelope"></i> Email *</label>
+            <input type="email" id="email" placeholder="you@example.com" required />
+            <span class="error-msg" id="emailErr"></span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label><i class="fas fa-phone"></i> Phone *</label>
+            <input type="tel" id="phone" placeholder="+91 9876543210" required />
+            <span class="error-msg" id="phoneErr"></span>
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-university"></i> College *</label>
+            <input type="text" id="college" placeholder="Karunya Institute" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label><i class="fas fa-book"></i> Department *</label>
+            <select id="department" required>
+              <option value="">-- Select --</option>
+              <option>CSE</option>
+              <option>IT</option>
+              <option>ECE</option>
+              <option>EEE</option>
+              <option>MECH</option>
+              <option>CIVIL</option>
+              <option>AIDS</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-graduation-cap"></i> Year *</label>
+            <select id="year" required>
+              <option value="">-- Select --</option>
+              <option>1st Year</option>
+              <option>2nd Year</option>
+              <option>3rd Year</option>
+              <option>4th Year</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group full-width">
+          <label><i class="fas fa-trophy"></i> Select Event *</label>
+          <select id="event" required>
+            <option value="">-- Select Event --</option>
+            <option>Hackathon</option>
+            <option>AI Challenge</option>
+            <option>CTF</option>
+            <option>Paper Presentation</option>
+            <option>UI/UX Design</option>
+            <option>Quiz</option>
+          </select>
+          <span class="error-msg" id="eventErr"></span>
+        </div>
+
+        <div class="form-row" id="teamFields" style="display:none;">
+          <div class="form-group">
+            <label><i class="fas fa-users"></i> Team Name</label>
+            <input type="text" id="teamName" placeholder="e.g. Code Ninjas" />
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-hashtag"></i> Team Size</label>
+            <input type="number" id="teamSize" min="2" max="4" placeholder="2–4" />
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn" id="submitBtn">
+          <span id="btnText"><i class="fas fa-paper-plane"></i> Register Now</span>
+          <span id="btnLoader" style="display:none;"><i class="fas fa-spinner fa-spin"></i> Processing...</span>
+        </button>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- ── SUCCESS MODAL ──────────────────────── -->
+  <div id="successModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-icon">🎉</div>
+      <h2>You're In!</h2>
+      <p id="modalMessage"></p>
+      <div class="reg-id-box">
+        <span>Registration ID:</span>
+        <strong id="modalRegId"></strong>
+      </div>
+      <!-- AI Preparation Tip -->
+      <div class="ai-tip-box" id="aiTipBox">
+        <div class="ai-tip-header">
+          <i class="fas fa-magic"></i> AI Preparation Tip
+        </div>
+        <div class="ai-tip-loading" id="aiTipLoading">
+          <i class="fas fa-spinner fa-spin"></i> Generating your personalized tip...
+        </div>
+        <p class="ai-tip-text" id="aiTipText"></p>
+      </div>
+      <button onclick="$('#successModal, #modalOverlay').fadeOut()" class="modal-close-btn">Close</button>
+    </div>
+  </div>
+  <div id="modalOverlay" class="modal-overlay"></div>
+
+  <!-- ── FOOTER ─────────────────────────────── -->
+  <footer id="contact">
+    <p>📧 mindcraft@karunya.edu &nbsp;|&nbsp; 📞 +91 98765 43210</p>
+    <p>© 2026 MINDCRAFT — Karunya Institute of Technology and Science</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
